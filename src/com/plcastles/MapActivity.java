@@ -83,8 +83,8 @@ public class MapActivity extends FragmentActivity {
 			stringLatitude = String.valueOf(gpsTracker.latitude);
 			stringLongitude = String.valueOf(gpsTracker.longitude);
 			if (stringLatitude.equals("0.0")) {
-				stringLatitude = "49.853192";
-				stringLongitude = "24.024499";
+				stringLatitude = "50.085399";
+				stringLongitude = "19.954841";
 			}
 			country = gpsTracker.getCountryName(MapActivity.this);
 			city = gpsTracker.getLocality(MapActivity.this);
