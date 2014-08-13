@@ -1,8 +1,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ScrollView01"
+    android:name="PL Castles"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:name="UA Castles" >
+    android:layout_height="fill_parent" >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -10,33 +10,33 @@
         android:background="#00CCFF" >
 
         <ImageButton
-            android:id="@+id/imageButtonUa"
+            android:id="@+id/imageButtonPl"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/ukraine_flag"
-            android:onClick="langUa"/>
+            android:background="@drawable/poland_flag"
+            android:onClick="langPl" />
 
         <ImageButton
-            android:id="@+id/imageButtonPl"
+            android:id="@+id/imageButtonUa"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/imageButtonUa"
+            android:layout_below="@+id/imageButtonPl"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/poland_flag"
-            android:onClick="langPl"/>
+            android:background="@drawable/ukraine_flag"
+            android:onClick="langUa" />
 
         <ImageButton
             android:id="@+id/imageButtonEn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/imageButtonPl"
+            android:layout_below="@+id/imageButtonUa"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"

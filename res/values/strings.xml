@@ -2,9 +2,9 @@
 <resources>
 
     <!-- Ukrainian -->
-    <string name="app_name">UA Castles</string>
-    <string name="title_activity_start">UA Castles</string>
-    <string name="title_activity_main">UA Castles</string>
+    <string name="app_name">PL Castles</string>
+    <string name="title_activity_start">PL Castles</string>
+    <string name="title_activity_main">PL Castles</string>
     <string name="title_activity_info"></string>
     <string name="title_activity_places"></string>
     <string name="title_activity_rout"></string>
@@ -24,7 +24,6 @@
     <string name="add_descr_ua">Опис:</string>
     <string name="add_done_ua">Готово</string>
     <string name="add_thanks_ua">Дякуємо!</string>
-    <string name="description_info_ua">Інформація взята з www.7chudes.in.ua</string>
     <string name="touch_here_ua">Торкніться сюди</string>
     <string name="change_view_ua">Змінити вигляд карти</string>
     <string name="change_language_ua">Змінити мову</string>
@@ -51,7 +50,6 @@
     <string name="add_descr_pl">Opis:</string>
     <string name="add_done_pl">Wykończenie</string>
     <string name="add_thanks_pl">Dziękuję!</string>
-    <string name="description_info_pl">Informacja pochodzi ze www.7chudes.in.ua</string>
     <string name="touch_here_pl">Dotknij tutaj</string>
     <string name="change_view_pl">Zmień widok mapy</string>
     <string name="change_language_pl">Zmiana języka</string>
@@ -78,7 +76,6 @@
     <string name="add_descr_en">Description:</string>
     <string name="add_done_en">Done</string>
     <string name="add_thanks_en">Thank You!</string>
-    <string name="description_info_en">Information is taken from www.7chudes.in.ua</string>
     <string name="touch_here_en">Touch here</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
