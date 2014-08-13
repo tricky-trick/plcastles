@@ -24,11 +24,12 @@
     <string name="add_descr_ua">Опис:</string>
     <string name="add_done_ua">Готово</string>
     <string name="add_thanks_ua">Дякуємо!</string>
+    <string name="description_info_ua">Інформація взята з www.zamki.pl</string>
     <string name="touch_here_ua">Торкніться сюди</string>
     <string name="change_view_ua">Змінити вигляд карти</string>
     <string name="change_language_ua">Змінити мову</string>
     <string name="rta_dialog_title_ua">Оцінити програму</string>
-    <string name="rta_dialog_message_ua">Бажаєте оцінити програму зараз? Ваш голос для нашс є важливий.</string>
+    <string name="rta_dialog_message_ua">Бажаєте оцінити програму зараз? Ваш голос для нас є важливий.</string>
     <string name="rta_dialog_ok_ua">Так</string>
     <string name="rta_dialog_cancel_ua">Не зараз</string>
     <string name="rta_dialog_no_ua">Ні, дякую</string>
@@ -50,6 +51,7 @@
     <string name="add_descr_pl">Opis:</string>
     <string name="add_done_pl">Wykończenie</string>
     <string name="add_thanks_pl">Dziękuję!</string>
+    <string name="description_info_pl">Informacja pochodzi ze www.zamki.pl</string>
     <string name="touch_here_pl">Dotknij tutaj</string>
     <string name="change_view_pl">Zmień widok mapy</string>
     <string name="change_language_pl">Zmiana języka</string>
@@ -76,6 +78,7 @@
     <string name="add_descr_en">Description:</string>
     <string name="add_done_en">Done</string>
     <string name="add_thanks_en">Thank You!</string>
+    <string name="description_info_en">Information is taken from www.zamki.pl</string>
     <string name="touch_here_en">Touch here</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
