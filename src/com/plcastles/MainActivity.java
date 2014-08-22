@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
 	
 	@Override
 	public void onBackPressed() {
+		super.onBackPressed();
 	}
 	
 	public void langUa(View v){
@@ -55,6 +56,20 @@ public class MainActivity extends Activity {
 				StartActivity.class);
 		startActivity(i);
 	}
+	
+	public void langHu(View v){
+		updateValue("_hu");
+		Intent i = new Intent(MainActivity.this,
+				StartActivity.class);
+		startActivity(i);
+	}
+	
+	public void langSk(View v){
+		updateValue("_sk");
+		Intent i = new Intent(MainActivity.this,
+				StartActivity.class);
+		startActivity(i);
+	}
 
 	private void updateValue(String val) {
 		prefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -62,6 +77,8 @@ public class MainActivity extends Activity {
 		editor.putString("prefix", val);
 		editor.commit();
 	}
+	
+	
 
 	@SuppressWarnings("unused")
 	private void addShortcut() {

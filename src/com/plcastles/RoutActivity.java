@@ -119,8 +119,8 @@ public class RoutActivity extends FragmentActivity {
 						stringLatitude = String.valueOf(gpsTracker.latitude);
 						stringLongitude = String.valueOf(gpsTracker.longitude);
 						if (stringLatitude.equals("0.0")) {
-							stringLatitude = "50.085399";
-							stringLongitude = "19.954841";
+							stringLatitude = "49.853192";
+							stringLongitude = "24.024499";
 						}
 						country = gpsTracker.getCountryName(RoutActivity.this);
 						city = gpsTracker.getLocality(RoutActivity.this);
@@ -148,23 +148,22 @@ public class RoutActivity extends FragmentActivity {
 
 					// Walking
 					if (isNetworkAvailable()) {
-						try{
-						GMapV2Direction mdDist = new GMapV2Direction();
-						Document doc_dist = mdDist.getDocument(myCoord,
-								myNearCoord, type);
-						ArrayList<LatLng> directionPointDist = mdDist
-								.getDirection(doc_dist);
-						distance = mdDist.getDistanceText(doc_dist);
-						time = mdDist.getDurationText(doc_dist);
-						rectLineDist = new PolylineOptions().width(6).color(
-								Color.GREEN);
+						try {
+							GMapV2Direction mdDist = new GMapV2Direction();
+							Document doc_dist = mdDist.getDocument(myCoord,
+									myNearCoord, type);
+							ArrayList<LatLng> directionPointDist = mdDist
+									.getDirection(doc_dist);
+							distance = mdDist.getDistanceText(doc_dist);
+							time = mdDist.getDurationText(doc_dist);
+							rectLineDist = new PolylineOptions().width(6)
+									.color(Color.GREEN);
 
-						for (int i = 0; i < directionPointDist.size(); i++) {
-							rectLineDist.add(directionPointDist.get(i));
+							for (int i = 0; i < directionPointDist.size(); i++) {
+								rectLineDist.add(directionPointDist.get(i));
+							}
+						} catch (Exception ex) {
 						}
-						}
-						catch(Exception ex)
-						{}
 					} else {
 						Toast toast = Toast.makeText(
 								getApplicationContext(),
@@ -277,7 +276,20 @@ public class RoutActivity extends FragmentActivity {
 
 			map.moveCamera(CameraUpdateFactory.newLatLngZoom(myCoord, 8));
 
-			map.addPolyline(rectLineDist);
+			if (isNetworkAvailable()) {
+				try {
+					map.addPolyline(rectLineDist);
+				} catch (Exception ex) {
+				}
+			} else {
+				Toast toast = Toast.makeText(
+						getApplicationContext(),
+						getString(getResources().getIdentifier(
+								"no_inet_string" + prefix, "string",
+								getPackageName())), Toast.LENGTH_SHORT);
+				toast.setGravity(Gravity.CENTER, 0, 0);
+				toast.show();
+			}
 
 		}
 	}
@@ -382,10 +394,20 @@ public class RoutActivity extends FragmentActivity {
 			startActivity(intent);
 			return true;
 		case NEW_MENU_ID: {
-			if (map.getMapType() == GoogleMap.MAP_TYPE_NORMAL)
-				map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-			else if (map.getMapType() == GoogleMap.MAP_TYPE_HYBRID)
-				map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+			if (isNetworkAvailable()) {
+				if (map.getMapType() == GoogleMap.MAP_TYPE_NORMAL)
+					map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+				else if (map.getMapType() == GoogleMap.MAP_TYPE_HYBRID)
+					map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+			} else {
+				Toast toast = Toast.makeText(
+						getApplicationContext(),
+						getString(getResources().getIdentifier(
+								"no_inet_string" + prefix, "string",
+								getPackageName())), Toast.LENGTH_SHORT);
+				toast.setGravity(Gravity.CENTER, 0, 0);
+				toast.show();
+			}
 			return true;
 		}
 		default:
